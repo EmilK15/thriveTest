@@ -1,0 +1,34 @@
+
+<form {{on "submit" this.submitForm}} class="job-form">
+    <label for="businessName">What is the name of your business?</label>
+    <Input placeholder="Name of Business" class="form-input" maxlength="2000" value={{this.businessName}}
+        onchange={{action (mut this.businessName) value="target.value"}} required/>
+
+    <label for="role">What is the name of the role?</label>
+    <select id="role" class="form-input" {{on "change" (fn this.changeValue "role")}} required>
+        <option disabled selected> -- Choose Role -- </option>
+        <option value="Customer Success">Customer Success</option>
+        <option value="Fullstack Engineer">Fullstack Engineer</option>
+        <option value="Product Manager">Product Manager</option>
+    </select>
+
+    <label for="role">What is your primary business?</label>
+    <select id="primaryBusiness" class="form-input" {{on "change" (fn this.changeValue "primaryBusiness")}} required>
+        <option disabled selected> -- Choose Primary Business -- </option>
+        <option value="Accounting">Accounting</option>
+        <option value="Software development">Software development</option>
+        <option value="Landscaping">Landscaping</option>
+    </select>
+    {{#if this.isTech}}
+        <label for="techBackground">Is a technical background required?</label>
+        <select id="techBackground" class="form-input" {{on "change" (fn this.changeValue "techBackground")}} required>
+            <option disabled selected> -- Choose One -- </option>
+            <option value=1>Yes</option>
+            <option value=0>No</option>
+        </select>
+    {{/if}}
+
+    <button class="btn" type="submit">Post Job</button>
+</form>
+
+{{yield}}

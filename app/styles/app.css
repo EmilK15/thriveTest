@@ -1,0 +1,24 @@
+.job-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #5CDB95;
+    border-radius: 5px;
+    width: 600px;
+    min-height: 80vh;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #EDF5E1;
+    min-height: 100vh;
+}
+
+.form-input {
+    width: 250px;
+    margin-bottom: 10px;
+}
