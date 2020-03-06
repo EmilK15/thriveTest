@@ -23,8 +23,8 @@
         <label for="techBackground">Is a technical background required?</label>
         <select id="techBackground" class="form-input" {{on "change" (fn this.changeValue "techBackground")}} required>
             <option disabled selected> -- Choose One -- </option>
-            <option value=1>Yes</option>
-            <option value=0>No</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
         </select>
     {{/if}}
 

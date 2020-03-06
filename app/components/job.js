@@ -21,7 +21,7 @@ export default class JobComponent extends Component {
     e.preventDefault();
     if(this.businessName && this.role && this.primaryBusiness) {
       this.techBackground != undefined ?
-        alert(`${this.businessName}, ${this.role}, ${this.primaryBusiness}, ${this.techBackground}`)
+        alert(`Created job posting with the following information: ${this.businessName}, ${this.role}, ${this.primaryBusiness}, ${this.techBackground}`)
       : alert(`${this.businessName}, ${this.role}, ${this.primaryBusiness}`)
 
     } else {
